@@ -11,7 +11,7 @@ now = datetime.now()
 
 @client.event
 async def on_ready():
-    print('{0.user} is online!'.format(client))
+    print('{0.user} is now online!'.format(client))
     await client.change_presence(game=discord.Game(name=config.game))
 
 # when a message is sent, check to see if the author is the bot. if not--
@@ -25,9 +25,6 @@ async def on_message(message):
 
     if message.content.startswith(config.prefix + 'hello'):
         await message.channel.send('Hello!')
-
-    elif message.content.startswith(config.prefix + 'yeet'):
-    	await message.channel.send('yee')
 
     elif message.content.startswith(config.prefix + 'up'):
     	await message.channel.send('I have been up since %s-%s-%s, %s:%s!' % (now.day, now.month, now.year, now.hour, now.minute))
