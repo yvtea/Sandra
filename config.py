@@ -1,4 +1,6 @@
-#the bot, or your, token
-token = 'your token here' 
-#the prefix you want a command to use, q!, !, w/e
+#bot account token so it can log in
+token = 'your token here'
+#prefix for commands, (q!)hello for example
 prefix = 'your prefix here'
+#what the bot is 'playing
+game = 'your game here'
