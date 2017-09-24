@@ -19,7 +19,4 @@ async def on_message(message):
     elif message.content.startswith('q!yeet'):
     	await message.channel.send('yee')
 
-    elif message.content.startswith('q!server'):
-    	await message.channel.send('I am serving ' + str(users) + 'users!')
-
-client.run(config.secret_token)
+client.run(config.token)
