@@ -21,7 +21,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-   
+
     if message.content.startswith(config.prefix + 'hello'):
         await message.channel.send('Hello!')
 
@@ -34,4 +34,7 @@ async def on_message(message):
     elif message.content.startswith(config.prefix + 'd20'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 20)))
 
+    elif message.content.startswith(config.prefix + 'hewwo?'):
+    	await message.channel.send('h-hewwo?!?!!?')
+    	
 client.run(config.token)
