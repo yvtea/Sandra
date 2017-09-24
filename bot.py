@@ -13,10 +13,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 #check to see if the message starts with the prefix + a command, if so, send a message
-    if message.content.startswith('q!hello'):
+    if message.content.startswith(config.prefix + 'hello'):
         await message.channel.send('Hello!')
 
-    elif message.content.startswith('q!yeet'):
+    elif message.content.startswith(config.prefix + 'yeet'):
     	await message.channel.send('yee')
 
 client.run(config.token)
