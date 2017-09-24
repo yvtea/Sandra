@@ -1,2 +1,2 @@
 # mybot
-its just a shitty bot made in python3 
+Should run fine normally as long as you add your stuff to the config.
