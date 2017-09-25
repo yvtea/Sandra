@@ -8,7 +8,7 @@ from datetime import datetime
 
 client = discord.Client()
 now = datetime.now()
-
+pyg = 'ay'
 # when the bot is ready, print a message to the console
 
 @client.event
@@ -34,6 +34,9 @@ async def on_message(message):
 
     elif message.content.startswith(config.prefix + 'd20'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 20)))
+
+    elif message.content.startswith(config.prefix + 'd8'):
+    	await message.channel.send('I rolled a %s!' % (random.randint(0, 8)))
 
     elif message.content.startswith(config.prefix + 'd6'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 6)))
