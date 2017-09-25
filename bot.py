@@ -36,5 +36,11 @@ async def on_message(message):
 
     elif message.content.startswith(config.prefix + 'hewwo?'):
     	await message.channel.send('h-hewwo?!?!!?')
-    	
+    
+    elif message.content.startswith(config.prefix + 'yeet'):
+    	await message.channel.send('yee')
+
+    elif message.content.startswith(config.prefix + 'waifu'):
+    	await message.channel.send('I rate your waifu a %s/100!' % (random.randint(0, 100)))
+
 client.run(config.token)
