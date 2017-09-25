@@ -14,6 +14,7 @@ now = datetime.now()
 @client.event
 async def on_ready():  
     print('{0.user} is now online!'.format(client))
+    print ('Discord.py Version ' +discord.__version__ + '!')
     await client.change_presence(game=discord.Game(name=config.game))
 # when a message is sent, check to see if the message author is the bot. if not, execute the specified command
 
@@ -23,10 +24,10 @@ async def on_message(message):
         return
 
     if message.content.startswith(config.prefix + 'hello'):
-        await message.channel.send('Hello!')
+        await message.channel.send('Hello, world!')
 
     elif message.content.startswith(config.prefix + 'up'):
-    	await message.channel.send('I have been up since %s-%s-%s, %s:%s NST!' % (now.day, now.month, now.year, now.hour, now.minute))
+    	await message.channel.send('I have been up since %s-%s-%s, %s:%s NST!' % (now.day, now.month, now.year, now.hour, now.minute,))
 
     elif message.content.startswith(config.prefix + 'code'):
     	await message.channel.send('I was made by <@202137748885340160>, and my source code is at https://github.com/yvtea/Sandra !')
