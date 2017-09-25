@@ -23,10 +23,10 @@ async def on_message(message):
         return
 
     if message.content.startswith(config.prefix + 'hello'):
-        await message.channel.send('Hello, world!')
+        await message.channel.send('Hello!')
 
     elif message.content.startswith(config.prefix + 'up'):
-    	await message.channel.send('I have been up since %s-%s-%s, %s:%s!' % (now.day, now.month, now.year, now.hour, now.minute))
+    	await message.channel.send('I have been up since %s-%s-%s, %s:%s NST!' % (now.day, now.month, now.year, now.hour, now.minute))
 
     elif message.content.startswith(config.prefix + 'code'):
     	await message.channel.send('I was made by <@202137748885340160>, and my source code is at https://github.com/yvtea/Sandra !')
@@ -34,7 +34,10 @@ async def on_message(message):
     elif message.content.startswith(config.prefix + 'd20'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 20)))
 
-    elif message.content.startswith(config.prefix + 'hewwo?'):
+    elif message.content.startswith(config.prefix + 'd6'):
+    	await message.channel.send('I rolled a %s!' % (random.randint(0, 6)))
+
+    elif message.content.startswith(config.prefix + 'hewwo'):
     	await message.channel.send('h-hewwo?!?!!?')
     
     elif message.content.startswith(config.prefix + 'yeet'):
