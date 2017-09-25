@@ -23,7 +23,7 @@ async def on_message(message):
         return
 
     if message.content.startswith(config.prefix + 'hello'):
-        await message.channel.send('Hello!')
+        await message.channel.send('Hello, world!')
 
     elif message.content.startswith(config.prefix + 'up'):
     	await message.channel.send('I have been up since %s-%s-%s, %s:%s!' % (now.day, now.month, now.year, now.hour, now.minute))
