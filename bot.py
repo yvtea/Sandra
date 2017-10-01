@@ -34,7 +34,10 @@ async def on_message(message):
 
     elif message.content.startswith(config.prefix + 'd20'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 20)))
-
+        
+    elif message.content.startswith(config.prefix + 'd12'):
+    	await message.channel.send('I rolled a %s!' % (random.randint(0, 12)))
+        
     elif message.content.startswith(config.prefix + 'd8'):
     	await message.channel.send('I rolled a %s!' % (random.randint(0, 8)))
 
